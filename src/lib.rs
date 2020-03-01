@@ -295,7 +295,7 @@ impl<E: Debug + Send + 'static> Runner<E> {
 
             // println!("creating schema {}", schema_name);
             let schema_setup = format!(
-                "CREATE SCHEMA {}; SET SEARCH_PATH TO {};",
+                "CREATE SCHEMA {}; SET search_path TO {};",
                 schema_name, schema_name
             );
             conn.batch_execute(&schema_setup)
